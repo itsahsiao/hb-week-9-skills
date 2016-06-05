@@ -15,9 +15,11 @@ def print_item(my_list, i=0):
 
     """
 
+    # # Non-recursive solution:
     # for item in my_list:
     #     print item
 
+    # Recursion
     if i > (len(my_list) - 1):
         return
 
