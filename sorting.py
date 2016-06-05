@@ -16,7 +16,27 @@ def merge_lists(list1, list2):
     [1, 3, 4, 7, 9, 11]
     """
 
-    pass
+    # Merge Strategy assumes two sorted lists and compares the first element of both lists
+    # Whichever is the smaller of the pair gets popped off and added to the results list
+    # When one list is empty or becomes epmty, add the items from the other list to results list
+
+    sorted_list = []
+
+    while len(list1) > 0 or len(list2) > 0:
+
+        if list1 == []:
+            sorted_list.append(list2.pop(0))
+
+        elif list2 == []:
+            sorted_list.append(list1.pop(0))
+
+        elif list1[0] < list2[0]:
+            sorted_list.append(list1.pop(0))
+
+        else:
+            sorted_list.append(list2.pop(0))
+
+    return sorted_list
 
 
 ##########ADVANCED##########
