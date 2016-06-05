@@ -19,7 +19,7 @@ def print_item(my_list, i=0):
     # for item in my_list:
     #     print item
 
-    # Recursion
+    # Recursion:
     if i > (len(my_list) - 1):
         return
 
@@ -51,7 +51,16 @@ def print_all_tree_data(tree):
         3
 
     """
-    pass
+
+    # A node, itself, is a tree
+
+    # Implicit Base Case:
+    print tree.data
+
+    if tree.children != []:
+        for tree in tree.children:
+            print_all_tree_data(tree)
+
 
 # 3. Write a function that uses recursion to find the length of a list.
 
