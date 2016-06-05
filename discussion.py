@@ -41,5 +41,24 @@ Binary Search Tree      O(log n)    O(n)    O(n)    O(1)    a little
 Tree                    O(n)        O(1)    O(1)    O(1)    a little
 
 
+SORTING
+
+1.  Bubble Sort starts from the beginning of the list, and compares the first two numbers to see which number is the larger of the pair, swapping them (if needed) to have the bigger number on the right. It keeps doing this until the largest number in the list is on the very right (end of list). This is only the first iteration of the list, so it goes through the same process to have the second largest number being second from the right, until all numbers are sorted from smallest to largest.
+
+    The list is always kept in place for Bubble Sort, so runspace is O(1).
+
+    Runtime for Bubble Sort is O(n^2).
+
+2.  Merge Sort uses recursion, diving the list into a list of one. It then compares the first element of both lists to see which number is smaller and pops the smaller number into a new list, the results list. Once one of the lists is empty, then the number(s) in the other list gets popped and appended to the results list. The results list will have the numbers sorted from smallest to largest. As recursion is called, it has to return this and close the function, returning to the previous function and doing the same thing, until finally, it gets to the original function and returns the results list with all numbers sorted.
+
+    As a new list is created each time, runspace is O(n).
+
+    Runtime for Merge Sort is O(n log n).
+
+3.  Quick Sort uses a pivot, chosen randomly, from the list, and moves all numbers lower than the pivot to the left of the pivot (the beginning of the list). and all numbers bigger than the pivot to the right of the pivot (the end of the list). The pivot is then in the right place, and the same process executes on the two halves (recursion), where the first half of the list will have a random pivot to arrange the numbers according and set the pivot in the right place. It keeps doing this with pivots and partioning until all numbers are sorted from smallest to largest.
+
+    As the list is in place, run space is O(1).
+
+    Runtime for Quick Sort is O(n log n).
 
 """
