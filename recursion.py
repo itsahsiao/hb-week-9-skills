@@ -54,12 +54,21 @@ def print_all_tree_data(tree):
 
     # A node, itself, is a tree
 
-    # Implicit Base Case:
+    # # Implicit Base Case solution
+    # print tree.data
+
+    # if tree.children != []:  # implicit base case
+    #     for tree in tree.children:
+    #         print_all_tree_data(tree)
+
+    # Explicit Base Case solution:
     print tree.data
 
-    if tree.children != []:
-        for tree in tree.children:
-            print_all_tree_data(tree)
+    if tree.children == []:  # explicit base case
+        return
+
+    for tree in tree.children:
+        print_all_tree_data(tree)
 
 
 # 3. Write a function that uses recursion to find the length of a list.
