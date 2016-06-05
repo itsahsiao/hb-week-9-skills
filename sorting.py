@@ -1,12 +1,28 @@
 #Sorting
 
+
 def bubble_sort(lst):
     """returns a sorted list using a optimized bubble sort algorithm
     i.e. using a variable to track if there hasn't been a swap
         >>> bubble_sort([3, 5, 7, 2, 4, 1])
         [1, 2, 3, 4, 5, 7]
     """
-    pass
+
+    # Bubble sort checks the first two numbers and swaps them around if number on left
+    # is bigger than number on right, so that biggest number is always on the right
+
+    # With a variable to keep track, we don't check numbers that have been swapped already
+
+    for i in range(len(lst) - 1):
+        made_swap = False
+        for j in range(len(lst) - 1 - i):
+            if lst[j] > lst[j + 1]:
+                lst[j], lst[j + 1] = lst[j + 1], lst[j]
+                made_swap = True
+        if not made_swap:
+            break
+
+    return lst
 
 
 def merge_lists(list1, list2):
