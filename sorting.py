@@ -67,9 +67,19 @@ def merge_sort(lst):
     >>> merge_sort([6, 2, 3, 9, 0, 1])
     [0, 1, 2, 3, 6, 9]
     """
-    pass
 
+    # Merge Sort uses recursion, making everything into lists of ones
+    # Then it uses the merge strategy to compare the first element from each list,
+    # popping the smallest number into the results list (merge_lists function)
 
+    if len(lst) < 2:
+        return lst
+
+    mid = int(len(lst)/2)
+    lst1 = merge_sort(lst[:mid])
+    lst2 = merge_sort(lst[mid:])
+
+    return merge_lists(lst1, lst2)
 
 
 #####################################################################
