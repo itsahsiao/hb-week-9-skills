@@ -61,4 +61,11 @@ SORTING
 
     Runtime for Quick Sort is O(n log n).
 
+
+GIT BRANCHING
+
+1.  An instance when you would use git branching is when you want to test out an idea that would not affect the main branch.
+
+2.  A pull request is a Github-specific feature where you can ask project owners to check out your branch and see if they would merge it into another branch. This is how you contribute code on Github.
+
 """
